@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Espaçamento entre as fotos */
+            padding: 20px;
+        }
+
+        .photo {
+            text-align: center;
+            width: 150px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			width: 160px;
+			height: 190px;
+        }
+
+        .photo p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Estilo do botão */
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .home-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+        
+        footer{
+            background: #333;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>ProtecVision</h1>
+        <p>Soluções em CFTV e Segurança Inteligente</p>
+    </header>
+    <!-- Fotos -->
+    <div class="gallery">
+        <div class="photo">
+            <img src="fotos/foto1.jpg" alt="Foto 1" >
+            <p>Paulo</p>
+			<p>54 anos</p>
+			<p>Instalador de Câmeras</p>
+        </div>
+        <div class="photo">
+            <img src="fotos/foto2.jpg" alt="Foto 2">
+            <p>Christopher</p>
+			<p>21 anos</p>
+			<p>Analista de Redes</p>
+        </div>
+        <div class="photo">
+            <img src="fotos/foto3.jpg" alt="Foto 3">
+            <p>Carlos Eduardo M.</p>
+			<p>19 anos</p>
+			<p>Analista de Redes</p>
+        </div>
+        <div class="photo">
+            <img src="fotos/foto4.jpeg" alt="Foto 4">
+            <p>Lucas Gabriel</p>
+			<p>19 anos</p>
+			<p>Eletricista</p>
+        </div>
+        <div class="photo">
+            <img src="fotos/foto5.jpeg" alt="Foto 5">
+            <p>Ismar</p>
+			<p>31 anos</p>
+			<p>Analista de Marketing</p>	
+            <p></p>
+			<p></p>
+			<p></p>
+        </div>
+        <div class="photo">
+            <img src="fotos/foto6.jpeg" alt="Foto 5">
+            <p>Lucas</p>
+			<p>21 anos</p>
+			<p>Analista de Redes</p>
+        </div>
+    </div>
+    <!-- Home button -->
+    <div class="button-container">
+        <a href="Landpage.html" class="home-button">Voltar para Home</a>
+    </div>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 ProtecVision | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

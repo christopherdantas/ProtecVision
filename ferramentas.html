@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas de Monitoramento de Rede</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .tool {
+            width: 23%;
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .tool img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tool h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .tool .arrow {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+            transition: transform 0.3s ease;
+        }
+        .tool.active .arrow {
+            transform: rotate(180deg);
+        }
+        .tool .details {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #333;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .tool.active .details {
+            display: block;
+        }
+        footer{
+            background: #333;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ProtecVision</h1>
+    <p>Soluções em CFTV e Segurança Inteligente</p>
+</header>
+
+<div class="container">
+    <!-- Nagios -->
+    <div class="tool" onclick="toggleDetails(this)">
+        <img src="https://github.com/cadu809/imagens/blob/main/image.png?raw=true" alt="Nagios">
+        <h2>Nagios</h2>
+        <div class="arrow">▼</div>
+        <div class="details">
+            <p><strong>Requisitos Mínimos:</strong> Linux, 1GB RAM, 1 CPU core</p>
+            <p><strong>Descrição:</strong> Nagios é uma ferramenta de monitoramento de rede de código aberto que permite monitorar sistemas, redes e infraestrutura. Ele oferece alertas e relatórios detalhados.</p>
+            <p><strong>Site Oficial:</strong> <a href="https://www.nagios.org/" target="_blank">https://www.nagios.org/</a></p>
+        </div>
+    </div>
+
+    <!-- Zabbix -->
+    <div class="tool" onclick="toggleDetails(this)">
+        <img src="https://github.com/cadu809/imagens/blob/main/2.png?raw=true" alt="Zabbix">
+        <h2>Zabbix</h2>
+        <div class="arrow">▼</div>
+        <div class="details">
+            <p><strong>Requisitos Mínimos:</strong> Linux, 2GB RAM, 2 CPU cores</p>
+            <p><strong>Descrição:</strong> Zabbix é uma solução de monitoramento de rede e aplicações que oferece monitoramento em tempo real, alertas e visualização de dados.</p>
+            <p><strong>Site Oficial:</strong> <a href="https://www.zabbix.com/" target="_blank">https://www.zabbix.com/</a></p>
+        </div>
+    </div>
+
+    <!-- Cacti -->
+    <div class="tool" onclick="toggleDetails(this)">
+        <img src="https://github.com/cadu809/imagens/blob/main/3.png?raw=true" alt="Cacti">
+        <h2>Cacti</h2>
+        <div class="arrow">▼</div>
+        <div class="details">
+            <p><strong>Requisitos Mínimos:</strong> Linux, 1GB RAM, 1 CPU core</p>
+            <p><strong>Descrição:</strong> Cacti é uma ferramenta de monitoramento de rede baseada em RRDtool que permite a criação de gráficos de desempenho de rede.</p>
+            <p><strong>Site Oficial:</strong> <a href="https://www.cacti.net/" target="_blank">https://www.cacti.net/</a></p>
+        </div>
+    </div>
+
+    <!-- Icinga -->
+    <div class="tool" onclick="toggleDetails(this)">
+        <img src="https://github.com/cadu809/imagens/blob/main/4.png?raw=true" alt="Icinga">
+        <h2>Icinga</h2>
+        <div class="arrow">▼</div>
+        <div class="details">
+            <p><strong>Requisitos Mínimos:</strong> Linux, 1GB RAM, 1 CPU core</p>
+            <p><strong>Descrição:</strong> Icinga é um fork do Nagios que oferece uma interface web moderna e recursos adicionais de monitoramento.</p>
+            <p><strong>Site Oficial:</strong> <a href="https://icinga.com/" target="_blank">https://icinga.com/</a></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 ProtecVision | Todos os direitos reservados</p>
+</footer>
+
+<script>
+    function toggleDetails(tool) {
+        tool.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
