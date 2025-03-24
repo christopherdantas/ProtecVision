@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha do Tempo de Ataques Cibernéticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Estilo do Header */
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .timeline-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .timeline-year {
+            min-width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0.3;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .timeline-year.active {
+            opacity: 1;
+        }
+
+        .year {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .details {
+            font-size: 1.2em;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 10;
+        }
+
+        .nav-button.prev {
+            left: 10px;
+        }
+
+        .nav-button.next {
+            right: 10px;
+        }
+        footer{
+            background: #333;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>ProtecVision</h1>
+    <p>Soluções em CFTV e Segurança Inteligente</p>
+    </header>
+
+    <!-- Linha do Tempo -->
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-year active">
+                <div class="year">2000</div>
+                <div class="title">Ataque de Negação de Serviço (DoS)</div>
+                <div class="details">Em 2000, ataques de Negação de Serviço (DoS) atingiram grandes empresas como Yahoo, Amazon e eBay, causando interrupções significativas nos serviços.</div>
+            </div>
+            <div class="timeline-year">
+                <div class="year">2007</div>
+                <div class="title">Ciberataque à Estônia</div>
+                <div class="details">Em 2007, a Estônia sofreu um massivo ciberataque, considerado o primeiro direcionado a uma nação, afetando bancos, mídia e serviços governamentais.</div>
+            </div>
+            <div class="timeline-year">
+                <div class="year">2010</div>
+                <div class="title">Stuxnet</div>
+                <div class="details">O worm Stuxnet, descoberto em 2010, foi projetado para atacar sistemas de controle industrial, especialmente usinas nucleares no Irã.</div>
+            </div>
+            <div class="timeline-year">
+                <div class="year">2017</div>
+                <div class="title">WannaCry</div>
+                <div class="details">O ransomware WannaCry, em 2017, afetou mais de 200.000 computadores em 150 países, explorando vulnerabilidades do Windows.</div>
+            </div>
+            <div class="timeline-year">
+                <div class="year">2020</div>
+                <div class="title">Ataque à SolarWinds</div>
+                <div class="details">Em 2020, um ataque à SolarWinds comprometeu várias agências governamentais dos EUA, permitindo o acesso a dados sensíveis.</div>
+            </div>
+        </div>
+        <button class="nav-button prev" onclick="prevYear()">&#10094;</button>
+        <button class="nav-button next" onclick="nextYear()">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ProtecVision | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const timeline = document.querySelector('.timeline');
+        const timelineYears = document.querySelectorAll('.timeline-year');
+        const totalYears = timelineYears.length;
+
+        function updateTimeline() {
+            const offset = -currentIndex * 100;
+            timeline.style.transform = `translateX(${offset}%)`;
+
+            timelineYears.forEach((year, index) => {
+                year.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function nextYear() {
+            if (currentIndex < totalYears - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Volta ao início
+            }
+            updateTimeline();
+        }
+
+        function prevYear() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalYears - 1; // Vai para o final
+            }
+            updateTimeline();
+        }
+
+        // Inicializa a linha do tempo
+        updateTimeline();
+    </script>
+</body>
+</html>
