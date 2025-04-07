@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework personalizado de segurança e governança de TI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            text-align: left;
+        }
+        .section {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #333;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        .button-container {
+            margin: 30px 0;
+        }
+
+        .home-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ProtecVision</h1>
+        <p>Soluções em CFTV e Segurança Inteligente</p>
+    </header>
+    
+    <div class="container">
+        <h2>Framework personalizado de segurança e governança de TI</h2>
+        <p>Este Framework tem como objetivo fornecer uma base para utilizarmos as boas práticas dos frameworks COBIT, ISO/IEC 27001 e NIST.</p>
+
+        <!-- Seção sobre o framework -->
+        <div class="section">
+            <h2>1. Governança Estratégica<br>Base: COBIT 2019 + NIST CSF 2.0 (Govern)</h2>
+            <p>A instalação do MySQL deve ser realizada de acordo com as necessidades do ambiente de produção, garantindo alta disponibilidade, desempenho e segurança. Abaixo estão os passos principais:</p>
+            <ul>
+                <li><strong>Alinhamento aos stakeholders:</strong> Definir metas de segurança alinhadas aos objetivos de negócio, utilizando o princípio "Meeting stakeholder needs" do COBIT.</li>
+                <li><strong>Estrutura de governança:</strong> Combinar as categorias do NIST CSF 2.0 (GV.RM para gestão de riscos, GV.RR para papéis) com os enablers do COBIT (políticas, estruturas organizacionais)</li> 
+                <li><strong>Ferramenta prática:</strong> 
+				<pre>Comitê de Governança:
+  - Diretoria: Define políticas e orçamentos (COBIT APO01)
+  - Equipe de Segurança: Implementa controles (ISO 27001 A.5) e monitora ameaças (NIST Detect)</pre></li>
+            </ul>
+        </div>
+
+        <!-- Seção sobre riscos e controles -->
+        <div class="section">
+            <h2>2. Gestão de Riscos e Controles<br>Base: ISO 27001 + NIST Protect/Detect</h2>
+            <p>Todo Framework necessita que sejam mensurados os riscos e quais ações serão tomadas caso aconteça algum incidente.</p>
+            <ul>
+                <li><strong>Avaliação de riscos:</strong> Implementar a cláusula 6.1 da ISO 27001 para identificar ameaças e vulnerabilidades, integrada ao Identify do NIST.</li>
+                <li><strong>Controles prioritários:</strong>
+                    <pre>  Criptografia de dados (ISO A.8.2, NIST PR.DS)</pre>
+					<pre>  Gestão de acesso (ISO A.9.1, NIST PR.AC)</pre>
+					<pre>  Backup e recuperação (ISO A.12.3, NIST RS.RP)</pre></li>
+                <li><strong>Mapeamento cruzado:</strong> 
+				<table border="1">
+					<tr align="center"  bgcolor=gray><td><strong>&nbsp &nbsp ISO 27001:2022 &nbsp &nbsp</strong> </td> 
+					  <td><strong>&nbsp &nbsp NIST CSF 2.0&nbsp &nbsp</strong> </td>  
+					  <td><strong>COBIT 2019</strong> </td> </tr>
+					<tr align="center"><td>A.5.1 (Políticas)</td> 
+					  <td>GV.PO (Govern)</td> 
+					  <td>&nbsp APO01 (Governança)&nbsp &nbsp </td> </tr>
+					<tr align="center"><td>A.12.4 (Logs)</td> 
+					  <td>&nbsp &nbsp DE.AE (Detect)&nbsp &nbsp </td> 
+					  <td>&nbsp DSS02 (Monitoração)&nbsp &nbsp</td> </tr>
+				</table>
+				</li>
+            </ul>
+			
+        </div>
+
+        <!-- Seção sobre Operação -->
+        <div class="section">
+            <h2>3. Operações de Segurança<br>Base: NIST Respond/Recover + ISO 27001</h2>
+            <ul>
+                <li><strong>Resposta a incidentes:</strong>
+				<pre>  Plano alinhado ao NIST Respond (notificação, contenção)</pre>
+				<pre>  Integração com a cláusula 8.2 da ISO (tratamento de não conformidades)</pre></li>
+                <li><strong>Resiliência:</strong>
+				<pre>  Testes de recuperação de desastres (NIST RC.RP)</pre>
+				<pre>  Análise pós-incidente (ISO 27001 A.16.1)</pre></li>
+            </ul>
+        </div>
+
+        <!-- Seção sobre Opeconformidade e melhoria contínua -->
+        <div class="section">
+            <h2>4. Conformidade e Melhoria Contínua<br>Base: COBIT + ISO 27001</h2>
+            <ul>
+                <li><strong>Monitoramento:</strong>
+				<pre>  Métricas de maturidade do COBIT (ex: nível 3 em APO13)</pre>
+				<pre>  Auditorias internas da ISO 27001 (cláusula 9.2)</pre></li>
+                <li><strong>Certificação:</strong> Alinhar o SGSI da ISO 27001 com os objetivos de governança do COBIT</li>
+            </ul>
+        </div>
+
+        <!-- Seção sobre implementação e prática -->
+        <div class="section">
+            <h2>5. Implementação Prática</h2>
+            <ul>
+                <li><strong>Diagnóstico inicial:</strong>
+				<pre>  Mapear processos existentes com COBIT</pre>
+				<pre>  Realizar avaliação de riscos conforme ISO 27001</pre></li>
+                <li><strong>Priorização:</strong>
+				<pre>  Usar o Current State vs. Target State do NIST para gaps críticos</pre></li>
+                <li><strong>Piloto:</strong>
+				<pre>  Implementar em um departamento (ex: TI) controles como:</pre>
+				<pre>    Gestão de acesso (ISO A.9.1 + NIST PR.AC)</pre>
+				<pre>    Backup automatizado (NIST PR.IP + ISO A.12.3)</pre></li>
+            </ul>
+        </div>
+
+        <!-- Seção Vantagens da Integração -->
+        <div class="section">
+            <h2>Vantagens da Integração</h2>
+            <ul>
+                <li><strong>Custos reduzidos:</strong> Elimina redundâncias entre frameworks</li>
+                <li><strong>Resiliência ampliada:</strong> Combina governança (COBIT), controles (ISO) e resposta (NIST)</li>
+                <li><strong>Conformidade regulatória:</strong> Atende LGPD, GDPR e leis setoriais<br><br></li>
+				<li><strong>Para adaptação à realidade organizacional</strong>, recomenda-se iniciar com um roadmap de 6-12 meses, priorizando áreas de maior exposição a riscos</li>
+            </ul>
+        </div>
+
+        <!-- Botão de Home -->
+        <div class="button-container">
+            <a href="index.html" class="home-button">Voltar para Home</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 ProtecVision | Todos os direitos reservados</p>
+    </div>
+</body>
+</html>
